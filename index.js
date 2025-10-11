@@ -3,9 +3,11 @@ const app=express()
 const authRouter=require("./Route/auth")
 const mongoose=require("mongoose")
 require("dotenv").config();
+const cors = require("cors")
 
 app.use(express.json())
 express.urlencoded({extended:true})
+app.use(cors())
 
 app.get("/",(req,res)=>{
     res.send("Hello")

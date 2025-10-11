@@ -11,7 +11,7 @@ router.get("/",(req,res)=>{
 })
 
 
-router.post("/",async(req,res)=>{
+router.post("/login",async(req,res)=>{
    data=req.body
    user=await User.findOne({name:data.name})
    if(!user){
